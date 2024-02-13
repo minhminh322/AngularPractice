@@ -1,0 +1,9 @@
+<div
+  [ngStyle]="{
+    'border-right': '2px solid ' + (selectedColor ? postNews.color : 'black')
+  }"
+>
+  <h2>{{ postNews.title }}</h2>
+  <p>{{ postNews.body }}</p>
+  <button (click)="selectedNews()">Set {{ postNews.color }}</button>
+</div>

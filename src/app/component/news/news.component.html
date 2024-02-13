@@ -1,0 +1,8 @@
+<h1 [ngStyle]="{ color: selectedNews.color }">{{ titleMaster }}</h1>
+
+<app-news-item
+  *ngFor="let postNews of news"
+  [postNews]="postNews"
+  [selectedColor]="postNews === selectedNews"
+  (emitter)="getSelectedNews($event)"
+/>
